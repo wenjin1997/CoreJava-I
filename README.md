@@ -1,2 +1,2 @@
-# CoreJava-I
-《Java核心技术卷I》笔记及代码
+# 笔记
+- [第3章 Java的基本程序设计结构](/notes/chapter03.md)
