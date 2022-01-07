@@ -3,3 +3,4 @@
 - [第2章 Java程序设计环境](/notes/chapter02.md)
 - [第3章 Java的基本程序设计结构](/notes/chapter03.md)
 - [第4章 对象与类](/notes/chapter04.md)
+- [第5章 继承](notes/chapter05.md)
