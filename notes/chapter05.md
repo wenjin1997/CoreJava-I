@@ -8,6 +8,9 @@
     - [5.1.6 理解方法调用](#516-理解方法调用)
     - [5.1.7 阻止继承：final类和方法](#517-阻止继承final类和方法)
     - [5.1.8 强制类型转换](#518-强制类型转换)
+    - [5.1.9 抽象类](#519-抽象类)
+  - [5.3 泛型数组列表](#53-泛型数组列表)
+    - [5.3.1 声明数组列表](#531-声明数组列表)
 
 # 第5章 继承
 * 继承的基本思想是，可以基于已有的类创建新的类。继承已存在的类就是复用（继承）这些类的方法，而且可以增加一些新的方法和字段，使新类能够适应新的情况。
@@ -76,3 +79,32 @@ Manager boss = (Manager) staff[0];
   * 只能在继承层次内进行强制类型转换。
   * 在将超类强制转换成子类之前，应该使用`instanceof`进行检查。
 * 一般情况下，最好尽量少用强制类型转换和`instanceof`运算符。
+
+### 5.1.9 抽象类
+* 为了提高程序的清晰度，包含一个或多个抽象方法的类本身必须被声明为抽象的。
+* 除了抽象方法之外，抽象类还可以包含字段和具体方法。
+* 扩展抽象类可以有两种选择。一种是在子类中保留抽象类中的部分或所有抽象方法仍未定义，这样就必须将子类也标记为抽象类；另一种做法是定义全部方法，这样一来，子类就不是抽象的了。
+* 即使不含抽象方法，也可以将类声明为抽象类。
+* 抽象类不能实例化。
+* 可以定义一个抽象类的对象变量，但是这样一个变量只能引用非抽象子类的对象。
+
+
+程序清单：
+* [Person.java](/code/src/ch5/abstractClasses/Person.java)
+* [Employee.java](/code/src/ch5/abstractClasses/Employee.java)
+* [Student.java](../code/src/ch5/abstractClasses/Student.java)
+* [PersonTest.java](../code/src/ch5/abstractClasses/PersonTest.java)
+
+## 5.3 泛型数组列表
+* ArrayList类类似数组，可以解决分配数组容量的问题。
+* ArrayList是一个带有类型参数的泛型类。
+
+### 5.3.1 声明数组列表
+* 声明和构造一个数组列表：
+```java
+ArrayList<Employee> staff = new ArrayList<Employee>();
+// 或者
+ArrayList<Employee> staff = new ArrayList<>();
+```
+* add方法：添加元素到数组列表中。
+* ensureCapacity方法：已经知道或估计出数组列表的大小。
